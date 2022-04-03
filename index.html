@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            background-color: rgb(186, 204, 221);
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .header{
+            width: 100vw;
+            height: 100px;
+            background-color: rgb(46, 96, 143);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .calculator-box{
+            height: 450px;
+            width: 350px;
+            border: 2px solid black;
+            margin: auto;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .item{
+            border: 1px solid black;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(233, 233, 233);
+        }
+
+        .item.input{
+            background-color: rgb(232, 237, 238);
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Calculator</h1>
+    </div>
+
+    <div class="calculator-box">
+        <div class="item input"></div>
+        <div class="item one">1</div>
+        <div class="item two">2</div>
+        <div class="item three">3</div>
+        <div class="item add">+</div>
+
+        <div class="item four">4</div>
+        <div class="item five">5</div>
+        <div class="item six">6</div>
+        <div class="item subtract">-</div>
+
+        <div class="item seven">7</div>
+        <div class="item eight">8</div>
+        <div class="item nine">9</div>
+        <div class="item multiply">*</div>
+
+        <div class="item zero">0</div>
+        <div class="item clear">c</div>
+        <div class="item equals">=</div>
+        <div class="item divide">/</div>
+    </div>
+</body>
+</html>
