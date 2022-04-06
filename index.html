@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="calculator.js" defer></script>
     <title>Document</title>
     <style>
         *{
@@ -28,7 +29,7 @@
         }
 
         .calculator-box{
-            height: 450px;
+            
             width: 350px;
             border: 2px solid black;
             margin: auto;
@@ -46,13 +47,44 @@
             justify-content: center;
             align-items: center;
             background-color: rgb(233, 233, 233);
+            padding: 25px;
+            font-size: 1.7em;
+            border-radius: 3px;
+        }
+
+        .item:hover{
+
+            background-color: rgb(136, 136, 136);
         }
 
         .item.input{
             background-color: rgb(232, 237, 238);
             grid-column-start: 1;
             grid-column-end: 5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100px;
+            padding: 0;
+            word-wrap: break-word;
+            word-break: break-all;
         }
+
+        .first-number{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .second-number{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
     </style>
 </head>
 <body>
@@ -61,26 +93,29 @@
     </div>
 
     <div class="calculator-box">
-        <div class="item input"></div>
-        <div class="item one">1</div>
-        <div class="item two">2</div>
-        <div class="item three">3</div>
-        <div class="item add">+</div>
+        <div class="item input">
+            <div class="first-number"></div>
+            <div class="second-number"></div>
+        </div>
+        <div number class="item one">1</div>
+        <div number class="item two">2</div>
+        <div number class="item three">3</div>
+        <div operator class="item add">+</div>
 
-        <div class="item four">4</div>
-        <div class="item five">5</div>
-        <div class="item six">6</div>
-        <div class="item subtract">-</div>
+        <div number class="item four">4</div>
+        <div number class="item five">5</div>
+        <div number class="item six">6</div>
+        <div operator class="item subtract">-</div>
 
-        <div class="item seven">7</div>
-        <div class="item eight">8</div>
-        <div class="item nine">9</div>
-        <div class="item multiply">*</div>
+        <div number class="item seven">7</div>
+        <div number class="item eight">8</div>
+        <div number class="item nine">9</div>
+        <div operator class="item multiply">*</div>
 
-        <div class="item zero">0</div>
+        <div number class="item zero">0</div>
         <div class="item clear">c</div>
         <div class="item equals">=</div>
-        <div class="item divide">/</div>
+        <div operator class="item divide">/</div>
     </div>
 </body>
 </html>
