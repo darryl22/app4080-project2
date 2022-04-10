@@ -6,11 +6,9 @@ let firstnum = document.querySelector('.first-number');
 let equals = document.querySelector('.equals');
 let currentoperator;
 
-function calculate(){
-    let f = parseFloat(firstnum.innerHTML);
-    let s = parseFloat(secondnum.innerHTML);
+function calculate(f, s, o){
     let result;
-    switch(currentoperator){
+    switch(o){
         case '+':
             result = f + s;
             break;    
@@ -45,7 +43,7 @@ operator.forEach(opr => {
             firstnum.innerHTML = secondnum.innerHTML;
             secondnum.innerHTML = "";
         }else{
-            calculate();
+            calculate(parseFloat(firstnum.innerHTML), parseFloat(secondnum.innerHTML), currentoperator);
         }
     })
 })
@@ -56,5 +54,7 @@ clear.addEventListener("click", () => {
 })
 
 equals.addEventListener("click", e => {
-    calculate();
+    calculate(parseFloat(firstnum.innerHTML), parseFloat(secondnum.innerHTML), currentoperator);
 })
+
+module.exports = {calculate};
