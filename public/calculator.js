@@ -23,7 +23,7 @@ function calculate(){
             result = f * s;
             break;
         case '/':
-            result = f * s;
+            result = f / s;
     }
 
     firstnum.innerHTML = result;
