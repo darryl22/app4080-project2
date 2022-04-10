@@ -22,10 +22,14 @@ function calculate(f, s, o){
             break;
         case '/':
             result = f / s;
+            break;
     }
 
     firstnum.innerHTML = result;
     secondnum.innerHTML = '';
+
+    //returned result is for testing
+    return result;
 }
 
 number.forEach(num => {
